@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Design System
- * @since Design System 1.1
+ * @since Design System 1.0
  */
 
 
