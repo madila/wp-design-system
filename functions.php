@@ -5,8 +5,168 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Design System
- * @since Design System 1.0
+ * @since Design System 1.1
  */
+
+
+if ( ! function_exists( 'get_theme_version' ) ) {
+	/**
+	 * Returns the theme version.
+	 *
+	 * @since Frames 1.0
+	 *
+	 * @return string
+	 */
+	function get_theme_version() {
+		return wp_get_theme()->get( 'Version' );
+	}
+
+}
+
+if ( ! function_exists( 'designsystem_setup' ) ) {
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 *
+	 * @since Frames 1.0
+	 *
+	 * @return void
+	 */
+	function designsystem_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Twenty Twenty-One, use a find and replace
+		 * to change 'designsystem' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'designsystem', get_template_directory() . '/languages' );
+
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+
+		/*
+		 * Let WordPress manage the document title.
+		 * This theme does not use a hard-coded <title> tag in the document head,
+		 * WordPress will provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
+
+		/**
+		 * Add post-formats support.
+		 */
+		add_theme_support(
+			'post-formats',
+			array(
+				'link',
+				'aside',
+				'gallery',
+				'image',
+				'quote',
+				'status',
+				'video',
+				'audio',
+				'chat',
+			)
+		);
+
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 1568, 9999 );
+
+		register_nav_menus(
+			array(
+				'primary' => esc_html__( 'Primary menu', 'designsystem' ),
+				'footer'  => __( 'Secondary menu', 'designsystem' ),
+			)
+		);
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support(
+			'html5',
+			array(
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+				'style',
+				'script',
+				'navigation-widgets',
+			)
+		);
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		$logo_width  = 300;
+		$logo_height = 100;
+
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'               => $logo_height,
+				'width'                => $logo_width,
+				'flex-width'           => true,
+				'flex-height'          => true,
+				'unlink-homepage-logo' => true,
+			)
+		);
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Add support for full and wide align images.
+		add_theme_support( 'align-wide' );
+
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
+
+		// Add support for custom line height controls.
+		add_theme_support( 'custom-line-height' );
+
+		// Add support for experimental link color control.
+		add_theme_support( 'experimental-link-color' );
+
+		// Add support for custom units.
+		add_theme_support( 'custom-units' );
+
+		// Add support for experimental cover block spacing.
+		add_theme_support( 'custom-spacing' );
+
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		add_editor_style(array('/style.css'));
+	}
+}
+add_action( 'after_setup_theme', 'designsystem_setup' );
+
+/**
+ * Enqueue scripts and styles.
+ *
+ * @since designsystem 1.0
+ *
+ * @return void
+ */
+function designsystem_scripts() {
+
+	wp_enqueue_style( 'designsystem', get_stylesheet_uri(), array(), get_theme_version() );
+}
+add_action( 'wp_enqueue_scripts', 'designsystem_scripts' );
 
 /**
  * Register block styles.
@@ -206,7 +366,7 @@ endif;
 add_action( 'init', 'designsystem_pattern_categories' );
 
 
-function frames_category_title( $title ) {
+function designsystem_category_title( $title ) {
 	if (is_category()) {
 		$title = single_cat_title('', false);
 	} elseif (is_tag()) {
@@ -220,4 +380,4 @@ function frames_category_title( $title ) {
 	}
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'frames_category_title' );
+add_filter( 'get_the_archive_title', 'designsystem_category_title' );

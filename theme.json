@@ -173,6 +173,11 @@
 					"slug": "10"
 				},
 				{
+					"name": "1.5",
+					"size": "min(1.5rem, 2.5vw)",
+					"slug": "15"
+				},
+				{
 					"name": "2",
 					"size": "min(2rem, 4vw)",
 					"slug": "20"
@@ -329,25 +334,37 @@
 				}
 			},
 			"core/button": {
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--10)",
+						"left": "var(--wp--preset--spacing--20)",
+						"right": "var(--wp--preset--spacing--20)",
+						"top": "var(--wp--preset--spacing--10)"
+					}
+				},
+				"border": {
+					"radius": "var(--wp--preset--spacing--30)"
+				},
 				"variations": {
 					"outline": {
 						"spacing": {
 							"padding": {
-								"bottom": "calc(0.6rem - 1px)",
-								"left": "calc(1rem - 1px)",
-								"right": "calc(1rem - 1px)",
-								"top": "calc(0.6rem - 1px)"
+								"bottom": "var(--wp--preset--spacing-10)",
+								"left": "var(--wp--preset--spacing-20)",
+								"right": "var(--wp--preset--spacing-10)",
+								"top": "var(--wp--preset--spacing-20)"
 							}
 						},
 						"border": {
-							"width": "1px"
+							"width": "1px",
+							"radius": "var(--wp--preset--spacing--30)"
 						}
 					}
 				}
 			},
 			"core/buttons": {
 				"spacing": {
-					"blockGap": "0.7rem"
+					"blockGap": "var(--wp--preset--spacing--10)"
 				}
 			},
 			"core/calendar": {
@@ -385,7 +402,7 @@
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontStyle": "normal",
-					"fontWeight": "400",
+					"fontWeight": "300",
 					"lineHeight": "1.6"
 				}
 			},
@@ -536,7 +553,8 @@
 							"radius": "var(--wp--preset--spacing--20)"
 						}
 					}
-				}
+				},
+				"css": "& .wp-element-caption { display: inline-block }"
 			},
 			"core/list": {
 				"spacing": {
@@ -862,11 +880,21 @@
 			},
 			"caption": {
 				"color": {
+					"background": "var(--wp--preset--color--base-2)",
 					"text": "var(--wp--preset--color--contrast-2)"
+				},
+				"border": {
+					"radius": "var(--wp--preset--spacing--20)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--body)",
-					"fontSize": "0.8rem"
+					"fontSize": "var(--wp--preset--font-size--small)"
+				},
+				"spacing": {
+					"margin": {
+						"top": "var(--wp--preset--spacing--15)"
+					},
+					"padding": "var(--wp--preset--spacing--5) var(--wp--preset--spacing--15)"
 				}
 			},
 			"h1": {
