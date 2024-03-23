@@ -183,6 +183,11 @@
 					"slug": "20"
 				},
 				{
+					"name": "2.5",
+					"size": "min(2.5rem, 5vw)",
+					"slug": "25"
+				},
+				{
 					"name": "3",
 					"size": "min(3rem, 6vw)",
 					"slug": "30"
