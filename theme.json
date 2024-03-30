@@ -137,7 +137,7 @@
 					"slug": "accent-2"
 				},
 				{
-					"color": "#174DD5",
+					"color": "#75e105",
 					"name": "Accent / Three",
 					"slug": "accent-3"
 				},
@@ -147,7 +147,7 @@
 					"slug": "accent-4"
 				},
 				{
-					"color": "#b5bdbc",
+					"color": "#881fcf",
 					"name": "Accent / Five",
 					"slug": "accent-5"
 				}
@@ -361,13 +361,17 @@
 		},
 		"useRootPaddingAwareAlignments": true,
 		"custom": {
-			"dark-mode-test": {
+			"dark-mode": {
 				"base": "#000000",
-				"contrast": "#F9F9F9",
-				"base-2": "#636363",
+				"base-2": "#2e2e33",
+				"contrast": "#e9e9e9",
 				"contrast-2": "#FFFFFF",
-				"accent-3": "#B1C5A4",
-				"accent-4": "#D8613C"
+				"contrast-3": "#d8d8d8",
+				"accent": "#00fff1",
+				"accent-2": "#a6ff00",
+				"accent-3": "#ffe300",
+				"accent-4": "#ff298e",
+				"accent-5": "#a426fc"
 			}
 		}
 	},
