@@ -137,7 +137,7 @@
 					"slug": "accent-2"
 				},
 				{
-					"color": "#75e105",
+					"color": "#b6e300",
 					"name": "Accent / Three",
 					"slug": "accent-3"
 				},
@@ -368,10 +368,10 @@
 				"contrast-2": "#FFFFFF",
 				"contrast-3": "#d8d8d8",
 				"accent": "#00fff1",
-				"accent-2": "#a6ff00",
-				"accent-3": "#ffe300",
-				"accent-4": "#ff298e",
-				"accent-5": "#a426fc"
+				"accent-2": "#8f64fa",
+				"accent-3": "#fffc4e",
+				"accent-4": "#ff3929",
+				"accent-5": "#ffa715"
 			}
 		}
 	},
