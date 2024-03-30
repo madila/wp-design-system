@@ -390,16 +390,11 @@
 				"border": {
 					"radius": "var(--wp--preset--spacing--30)"
 				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				},
 				"variations": {
 					"outline": {
-						"spacing": {
-							"padding": {
-								"bottom": "var(--wp--preset--spacing-10)",
-								"left": "var(--wp--preset--spacing-20)",
-								"right": "var(--wp--preset--spacing-10)",
-								"top": "var(--wp--preset--spacing-20)"
-							}
-						},
 						"border": {
 							"width": "1px",
 							"radius": "var(--wp--preset--spacing--30)"
