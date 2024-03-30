@@ -102,42 +102,42 @@
 			],
 			"palette": [
 				{
-					"color": "#f9f9f9",
+					"color": "light-dark(#f6f6f6, #2a2a2a)",
 					"name": "Base",
 					"slug": "base"
 				},
 				{
-					"color": "#ffffff",
+					"color": "light-dark(#ffffff, #000000)",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
 				{
-					"color": "#111111",
+					"color": "light-dark(#333b3c, #f9f9f9)",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#636363",
+					"color": "light-dark(#000000, #ffffff)",
 					"name": "Contrast / Two",
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#A4A4A4",
+					"color": "light-dark(#4a4a4a, #A4A4A4)",
 					"name": "Contrast / Three",
 					"slug": "contrast-3"
 				},
 				{
-					"color": "#cfcabe",
+					"color": "light-dark(#F8DB00, #F8DB00)",
 					"name": "Accent",
 					"slug": "accent"
 				},
 				{
-					"color": "#c2a990",
+					"color": "light-dark(#F8DB00, #F8DB00)",
 					"name": "Accent / Two",
 					"slug": "accent-2"
 				},
 				{
-					"color": "#d8613c",
+					"color": "light-dark(#174DD5, #174DD5)",
 					"name": "Accent / Three",
 					"slug": "accent-3"
 				},
@@ -221,43 +221,83 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "Inter",
+							"fontFamily": "Ibarra Real Nova",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "300 900",
+							"fontWeight": "400",
 							"src": [
-								"file:./assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2"
+								"file:./assets/fonts/ibarra-real-nova/ibarra-real-nova-latin-400.woff2"
+							]
+						},
+						{
+							"fontFamily": "Ibarra Real Nova",
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/ibarra-real-nova/ibarra-real-nova-latin-400italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Ibarra Real Nova",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/ibarra-real-nova/ibarra-real-nova-latin-600.woff2"
+							]
+						},
+						{
+							"fontFamily": "Ibarra Real Nova",
+							"fontStyle": "italic",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/ibarra-real-nova/ibarra-real-nova-latin-600italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Ibarra Real Nova",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/ibarra-real-nova/ibarra-real-nova-latin-700.woff2"
+							]
+						},
+						{
+							"fontFamily": "Ibarra Real Nova",
+							"fontStyle": "italic",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/ibarra-real-nova/ibarra-real-nova-latin-700italic.woff2"
 							]
 						}
 					],
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
-					"slug": "body"
+					"fontFamily": "\"Ibarra Real Nova\", serif",
+					"name": "Ibarra Real Nova",
+					"slug": "serif"
 				},
 				{
 					"fontFace": [
 						{
-							"fontFamily": "Cardo",
+							"fontFamily": "Albert Sans",
+							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": ["file:./assets/fonts/cardo/cardo_normal_400.woff2"]
+							"fontWeight": "100 800",
+							"src": [
+								"file:./assets/fonts/albert-sans/albert-sans-latin-wght-normal.woff2"
+							]
 						},
 						{
-							"fontFamily": "Cardo",
+							"fontFamily": "Albert Sans",
+							"fontStretch": "normal",
 							"fontStyle": "italic",
-							"fontWeight": "400",
-							"src": ["file:./assets/fonts/cardo/cardo_italic_400.woff2"]
-						},
-						{
-							"fontFamily": "Cardo",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": ["file:./assets/fonts/cardo/cardo_normal_700.woff2"]
+							"fontWeight": "100 800",
+							"src": [
+								"file:./assets/fonts/albert-sans/albert-sans-latin-wght-italic.woff2"
+							]
 						}
 					],
-					"fontFamily": "Cardo",
-					"name": "Cardo",
-					"slug": "heading"
+					"fontFamily": "\"Albert Sans\", sans-serif",
+					"name": "Albert Sans",
+					"slug": "sans-serif"
 				},
 				{
 					"fontFamily": "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
@@ -695,7 +735,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
 					"fontSize": "var(--wp--preset--font-size--x-large)",
 					"fontStyle": "italic",
 					"fontWeight": "400",
@@ -739,7 +779,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
 					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontStyle": "italic",
 					"lineHeight": "1.3"
@@ -829,6 +869,7 @@
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--contrast)"
 		},
+		"css": ":root {color-scheme: light dark} [data-scheme=dark] body { color-scheme: dark } [data-scheme=light] body { color-scheme: light }",
 		"elements": {
 			"button": {
 				":active": {
@@ -935,7 +976,7 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontFamily": "var(--wp--preset--font-family--sans-serif)",
 					"fontWeight": "400",
 					"lineHeight": "1.2"
 				}
