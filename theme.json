@@ -132,7 +132,7 @@
 					"slug": "accent"
 				},
 				{
-					"color": "#F8DB00",
+					"color": "#3500ff",
 					"name": "Accent / Two",
 					"slug": "accent-2"
 				},
@@ -142,12 +142,12 @@
 					"slug": "accent-3"
 				},
 				{
-					"color": "#b1c5a4",
+					"color": "#ff298e",
 					"name": "Accent / Four",
 					"slug": "accent-4"
 				},
 				{
-					"color": "#881fcf",
+					"color": "#a426fc",
 					"name": "Accent / Five",
 					"slug": "accent-5"
 				}
