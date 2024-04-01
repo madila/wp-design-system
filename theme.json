@@ -107,7 +107,7 @@
 					"slug": "base"
 				},
 				{
-					"color": "#ffffff",
+					"color": "#FaFaFa",
 					"name": "Base / Two",
 					"slug": "base-2"
 				},
@@ -117,7 +117,7 @@
 					"slug": "contrast"
 				},
 				{
-					"color": "#000000",
+					"color": "#070707",
 					"name": "Contrast / Two",
 					"slug": "contrast-2"
 				},
@@ -150,6 +150,16 @@
 					"color": "#a426fc",
 					"name": "Accent / Five",
 					"slug": "accent-5"
+				},
+				{
+					"color": "#000000",
+					"name": "Always Black",
+					"slug": "always-black"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "Always White",
+					"slug": "always-white"
 				}
 			]
 		},
@@ -362,16 +372,18 @@
 		"useRootPaddingAwareAlignments": true,
 		"custom": {
 			"dark-mode": {
-				"base": "#000000",
+				"base": "#070707",
 				"base-2": "#2e2e33",
 				"contrast": "#e9e9e9",
-				"contrast-2": "#FFFFFF",
+				"contrast-2": "#FaFaFa",
 				"contrast-3": "#d8d8d8",
 				"accent": "#00fff1",
 				"accent-2": "#8f64fa",
 				"accent-3": "#fffc4e",
 				"accent-4": "#ff3929",
-				"accent-5": "#ffa715"
+				"accent-5": "#ffa715",
+				"always-black": "#000000",
+				"always-white": "#FFFFFF"
 			}
 		}
 	},
@@ -994,8 +1006,8 @@
 		"spacing": {
 			"blockGap": "1.2rem",
 			"padding": {
-				"left": "var(--wp--preset--spacing--50)",
-				"right": "var(--wp--preset--spacing--50)"
+				"left": "var(--wp--preset--spacing--30)",
+				"right": "var(--wp--preset--spacing--30)"
 			}
 		},
 		"typography": {
